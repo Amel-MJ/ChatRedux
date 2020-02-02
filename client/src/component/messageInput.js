@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { shareMessages, addRoom } from "../action/index";
 
-const WAIT_INTERVAL = 2000;
+
 
 class MessageInput extends Component {
 
@@ -31,7 +31,8 @@ class MessageInput extends Component {
 
   handleSetMessage = event => {
     this.setState({
-      message: event.target.value
+      message: event.target.value,
+      
     });
   };
 
@@ -48,6 +49,11 @@ class MessageInput extends Component {
         this.props.room,
         this.state.pseudo
       );
+      
+      this.setState({
+        message: ''
+      });
+     
     }
   };
 
@@ -55,27 +61,19 @@ class MessageInput extends Component {
     
     return (
       <div>
-        {/*<button onClick={this.createRoom}>create conversation</button>*/}
+    
 
         <div className="input">
           <div className="dialog">
             <input
               type="text"
               placeholder="Write your message here.."
+              value={this.state.message}
               onChange={this.handleSetMessage}
             />
-            <label htmlFor="file">
-              <img src="/img/icons/paper-clip.svg" alt="" />
-              <input type="file" id="file" />
-            </label>
+         
 
-            <div className="icon">
-              <img src="/img/icons/microphone-black-shape.svg" alt="" />
-            </div>
-
-            <div className="icon">
-              <img src="/img/icons/smiling-emoticon-square-face.svg" alt="" />
-            </div>
+            
 
             <div className="icon send">
               <img

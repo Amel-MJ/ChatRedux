@@ -17,15 +17,6 @@ class Contact extends Component {
         this.props.addRoom(roomId)
         this.props.socket.emit("addUserToRoom", this.props.currentUser, roomId);
         this.props.socket.emit("addUserToRoom", obj.user, roomId);
-        /*
-        this.setState({ room: roomId }, () => {
-          this.state.socket.emit("addUserToRoom", this.state.pseudo, roomId);
-          console.log(this.props.selectedUser)
-          this.props.selectedUser.forEach(element => {
-            this.state.socket.emit("addUserToRoom", element.user, roomId);
-          });
-        });
-        */
 
     }
   

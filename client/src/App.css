@@ -508,6 +508,8 @@ body{
     margin: auto;
     padding: 20px;
     position: relative;
+    height: 400px;
+    overflow-y: scroll;
 }
 .chat .chat-box .my-msg{
     margin-bottom: 20px;

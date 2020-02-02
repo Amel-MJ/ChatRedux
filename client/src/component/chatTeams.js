@@ -17,11 +17,7 @@ class ChatTeams extends Component {
                   <span className="state-dot"></span>
                 </div>
               ))}
-                
-
-              <div className="icon">
-              <img src="/img/icons/settings.svg" alt=""/>
-            </div>
+         
 
             </div>
           </div> )

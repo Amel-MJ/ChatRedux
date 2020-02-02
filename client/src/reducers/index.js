@@ -15,7 +15,7 @@ function reducer(state = init, action) {
   console.log(state)
   switch (action.type) {
     case SHARE_MESSAGE:
-      return { ...state, listMessage:  action.payload };
+      return { ...state, listMessage: action.payload };
     case ADD_USER:
       return { ...state, selectedUser: [action.payload]}
     case ADD_ROOM:
